@@ -29,6 +29,11 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
 
@@ -73,226 +78,353 @@
   <div class="top-bar">
     <div class="top-bar-container">
       <div class="top-bar-item">
-        <i class="fas fa-phone"></i>
+        <i class="fas fa-phone-alt"></i>
         <span>+91-XXXXXXXXXX</span>
       </div>
       <div class="top-bar-item">
         <i class="fas fa-map-marker-alt"></i>
         <span>Alkapuri, Vadodara, Gujarat</span>
       </div>
+      <div class="top-bar-item">
+        <i class="fas fa-clock"></i>
+        <span>Mon-Sat: 9 AM - 7 PM</span>
+      </div>
     </div>
   </div>
 
-  <!-- Navigation (Sticky) -->
-  <nav class="navbar">
+  <!-- Navigation (Sticky with Glassmorphism) -->
+  <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <div class="logo">SAHERI HARDWARE</div>
+      <div class="logo">
+        <i class="fas fa-tools"></i>
+        <span>SAHERI HARDWARE</span>
+      </div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#products" class="nav-link">Products</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="cta-btn">Get Quote</a>
+      </div>
       <div class="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </div>
     </div>
-    <!-- Mobile dropdown menu (hidden by default) -->
+    <!-- Mobile dropdown menu -->
     <div class="mobile-menu">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#products">Products</a>
       <a href="#contact">Contact</a>
+      <a href="#contact" class="mobile-cta">Get Quote</a>
     </div>
   </nav>
 
   <!-- Main Content -->
   <main>
-    <!-- Hero Section -->
+    <!-- Hero Section with Modern Design -->
     <section id="home" class="hero">
+      <div class="hero-background"></div>
+      <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1>Saheri Hardware Centre</h1>
-        <p class="tagline">Quality Hardware & Building Materials</p>
-        <p class="location">Serving Vadodara Since [YEAR]</p>
+        <div class="hero-badge fade-in">
+          <i class="fas fa-award"></i>
+          <span>Trusted Since [YEAR]</span>
+        </div>
+        <h1 class="fade-in-up">Building Your <span class="gradient-text">Dreams</span> with Quality Hardware</h1>
+        <p class="hero-subtitle fade-in-up">Premium Tools, Materials & Expert Guidance for Every Project in Vadodara</p>
+        <div class="hero-buttons fade-in-up">
+          <a href="#products" class="btn btn-primary">
+            <span>Explore Products</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-phone-alt"></i>
+            <span>Contact Us</span>
+          </a>
+        </div>
+        <div class="hero-stats fade-in-up">
+          <div class="stat-item">
+            <div class="stat-number"><span class="counter" data-target="500">0</span>+</div>
+            <div class="stat-label">Products</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number"><span class="counter" data-target="1000">0</span>+</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number"><span class="counter" data-target="25">0</span>+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse"></div>
+        <span>Scroll Down</span>
       </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Features Section with Glassmorphism Cards -->
     <section class="features">
       <div class="container">
         <div class="features-grid">
-          <div class="feature-box">
-            <i class="fas fa-star"></i>
-            <h3>Quality Products</h3>
-            <p>Top brands and reliable materials</p>
+          <div class="feature-card glass-card" data-aos="fade-up">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Premium Quality</h3>
+            <p>Top-tier brands and certified materials for lasting performance</p>
           </div>
-          <div class="feature-box">
-            <i class="fas fa-bolt"></i>
-            <h3>Fast Service</h3>
-            <p>Quick assistance and support</p>
+          <div class="feature-card glass-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-icon">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+            <h3>Fast Delivery</h3>
+            <p>Quick processing and same-day delivery across Vadodara</p>
           </div>
-          <div class="feature-box">
-            <i class="fas fa-check-circle"></i>
-            <h3>Expert Advice</h3>
-            <p>Professional guidance available</p>
+          <div class="feature-card glass-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-icon">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <h3>Expert Support</h3>
+            <p>Professional guidance from experienced hardware specialists</p>
+          </div>
+          <div class="feature-card glass-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-icon">
+              <i class="fas fa-tags"></i>
+            </div>
+            <h3>Best Prices</h3>
+            <p>Competitive pricing with regular offers and bulk discounts</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section with Modern Layout -->
     <section id="about" class="about">
       <div class="container">
-        <h2>About Saheri Hardware Centre</h2>
-        <p class="about-text">[Business description - Saheri Hardware Centre has been a trusted name in Alkapuri, Vadodara for quality hardware and building materials. We pride ourselves on offering a wide range of products from top brands, expert advice, and exceptional customer service.]</p>
-        <p class="about-text">[Our commitment is to provide our customers with the best hardware solutions for their construction, renovation, and repair needs. Whether you're a professional contractor or a DIY enthusiast, we have everything you need under one roof.]</p>
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-badge">About Us</span>
+          <h2>Your Trusted Hardware <span class="gradient-text">Partner</span></h2>
+          <p class="section-subtitle">Building excellence with quality products and exceptional service since [YEAR]</p>
+        </div>
+        <div class="about-content">
+          <div class="about-text" data-aos="fade-right">
+            <div class="about-description">
+              <p>[Saheri Hardware Centre has been the cornerstone of quality hardware supply in Alkapuri, Vadodara. With decades of experience, we've built a reputation for reliability, expertise, and an extensive product range that meets every construction and renovation need.]</p>
+              <p>[From professional contractors to DIY enthusiasts, we serve everyone with the same dedication. Our commitment to quality, competitive pricing, and customer satisfaction has made us the preferred choice for thousands of customers across Gujarat.]</p>
+            </div>
+            <div class="about-features">
+              <div class="about-feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Comprehensive Product Range</span>
+              </div>
+              <div class="about-feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Certified & Authentic Materials</span>
+              </div>
+              <div class="about-feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Expert Technical Guidance</span>
+              </div>
+              <div class="about-feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Flexible Payment Options</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-image" data-aos="fade-left">
+            <div class="image-placeholder">
+              <i class="fas fa-store"></i>
+              <p>Store Image</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Products Section -->
+    <!-- Products Section with Modern Card Design -->
     <section id="products" class="products">
       <div class="container">
-        <h2>Our Product Categories</h2>
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-badge">Our Products</span>
+          <h2>Explore Our <span class="gradient-text">Categories</span></h2>
+          <p class="section-subtitle">Premium selection of hardware, tools, and building materials for every project</p>
+        </div>
         <div class="category-grid">
-          <div class="category-card">
-            <div class="category-image">
+          <div class="category-card" data-aos="zoom-in">
+            <div class="category-icon-wrapper gradient-bg-1">
               <i class="fas fa-tools"></i>
             </div>
-            <h3>Tools</h3>
-            <p>Hand and power tools for all your needs</p>
+            <h3>Hand & Power Tools</h3>
+            <p>Professional-grade tools for precision work</p>
+            <a href="#contact" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
           </div>
-          <div class="category-card">
-            <div class="category-image">
+          <div class="category-card" data-aos="zoom-in" data-aos-delay="50">
+            <div class="category-icon-wrapper gradient-bg-2">
               <i class="fas fa-paint-roller"></i>
             </div>
-            <h3>Paints</h3>
-            <p>Premium quality paints and colors</p>
+            <h3>Paints & Coatings</h3>
+            <p>Wide range of colors and finishes</p>
+            <a href="#contact" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
           </div>
-          <div class="category-card">
-            <div class="category-image">
+          <div class="category-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="category-icon-wrapper gradient-bg-3">
               <i class="fas fa-faucet"></i>
             </div>
-            <h3>Plumbing</h3>
-            <p>Complete plumbing supplies and fittings</p>
+            <h3>Plumbing Supplies</h3>
+            <p>Complete solutions for water systems</p>
+            <a href="#contact" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
           </div>
-          <div class="category-card">
-            <div class="category-image">
+          <div class="category-card" data-aos="zoom-in" data-aos-delay="150">
+            <div class="category-icon-wrapper gradient-bg-4">
               <i class="fas fa-bolt"></i>
             </div>
-            <h3>Electrical</h3>
-            <p>Electrical materials and equipment</p>
+            <h3>Electrical Items</h3>
+            <p>Quality wiring and electrical components</p>
+            <a href="#contact" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
           </div>
-          <div class="category-card">
-            <div class="category-image">
-              <i class="fas fa-hammer"></i>
+          <div class="category-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="category-icon-wrapper gradient-bg-5">
+              <i class="fas fa-cubes"></i>
             </div>
             <h3>Building Materials</h3>
-            <p>Quality construction materials</p>
+            <p>Cement, bricks, and construction essentials</p>
+            <a href="#contact" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
           </div>
-          <div class="category-card">
-            <div class="category-image">
+          <div class="category-card" data-aos="zoom-in" data-aos-delay="250">
+            <div class="category-icon-wrapper gradient-bg-6">
               <i class="fas fa-hard-hat"></i>
             </div>
             <h3>Safety Equipment</h3>
-            <p>Safety gear and protective equipment</p>
+            <p>Protection gear for every work environment</p>
+            <a href="#contact" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
           </div>
-          <div class="category-card">
-            <div class="category-image">
-              <i class="fas fa-screwdriver"></i>
+          <div class="category-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="category-icon-wrapper gradient-bg-7">
+              <i class="fas fa-screwdriver-wrench"></i>
             </div>
-            <h3>Hardware</h3>
-            <p>Screws, nails, and fasteners</p>
+            <h3>Fasteners & Hardware</h3>
+            <p>Screws, bolts, nails, and fixing solutions</p>
+            <a href="#contact" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
           </div>
-          <div class="category-card">
-            <div class="category-image">
-              <i class="fas fa-house-damage"></i>
+          <div class="category-card" data-aos="zoom-in" data-aos-delay="350">
+            <div class="category-icon-wrapper gradient-bg-8">
+              <i class="fas fa-home"></i>
             </div>
             <h3>Home Improvement</h3>
-            <p>Everything for your home projects</p>
+            <p>Everything for renovation and upgrades</p>
+            <a href="#contact" class="category-link">View Products <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section with Modern Design -->
     <section id="contact" class="contact">
       <div class="container">
-        <h2>Get In Touch</h2>
-        <div class="contact-layout">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-badge">Get In Touch</span>
+          <h2>Let's Start Your <span class="gradient-text">Project</span></h2>
+          <p class="section-subtitle">Have questions? Need a quote? We're here to help!</p>
+        </div>
+        <div class="contact-wrapper">
           <!-- Contact Form -->
-          <div class="contact-form-wrapper">
+          <div class="contact-form-section glass-card" data-aos="fade-right">
+            <h3>Send us a Message</h3>
             <form id="contactForm" class="contact-form">
-              <div class="form-group">
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <span class="error-message" id="name-error"></span>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name"><i class="fas fa-user"></i> Name *</label>
+                  <input type="text" id="name" name="name" placeholder="Your Name" required>
+                  <span class="error-message" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email"><i class="fas fa-envelope"></i> Email *</label>
+                  <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                  <span class="error-message" id="email-error"></span>
+                </div>
               </div>
-
               <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                <span class="error-message" id="email-error"></span>
-              </div>
-
-              <div class="form-group">
-                <label for="phone">Phone *</label>
+                <label for="phone"><i class="fas fa-phone"></i> Phone *</label>
                 <input type="tel" id="phone" name="phone" placeholder="+91-XXXXXXXXXX" required>
                 <span class="error-message" id="phone-error"></span>
               </div>
-
               <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                <label for="message"><i class="fas fa-comment-dots"></i> Message *</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
                 <span class="error-message" id="message-error"></span>
               </div>
-
-              <button type="submit" class="submit-btn">Send Message</button>
+              <button type="submit" class="submit-btn">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
               <div class="success-message" id="success-message">
-                <i class="fas fa-check-circle"></i> Thank you! We'll contact you soon.
+                <i class="fas fa-check-circle"></i>
+                <span>Thank you! We'll contact you soon.</span>
               </div>
             </form>
           </div>
 
-          <!-- Map and Info -->
-          <div class="contact-info">
-            <div class="map-container">
-              <!-- Replace with actual Google Maps embed code -->
+          <!-- Contact Info -->
+          <div class="contact-info-section" data-aos="fade-left">
+            <div class="info-card glass-card">
+              <h3>Visit Our Store</h3>
+              <div class="info-items">
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="info-content">
+                    <h4>Address</h4>
+                    <p>[Full Address], Alkapuri, Vadodara, Gujarat [PIN]</p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div class="info-content">
+                    <h4>Phone</h4>
+                    <p><a href="tel:+91XXXXXXXXXX">+91-XXXXXXXXXX</a></p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="info-content">
+                    <h4>Email</h4>
+                    <p><a href="mailto:info@saherihardware.com">info@saherihardware.com</a></p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="info-content">
+                    <h4>Business Hours</h4>
+                    <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                    <p>Sunday: Closed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-card glass-card">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.5!2d72.5!3d22.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDE4JzAwLjAiTiA3MsKwMzAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
                 width="100%"
                 height="300"
-                style="border:1px solid #e0e0e0; border-radius: 8px;"
+                style="border:0; border-radius: 12px;"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
               </iframe>
-              <p class="map-note"><small><!-- Note: Replace with actual Google Maps embed URL for Saheri Hardware Centre, Alkapuri, Vadodara --></small></p>
-            </div>
-
-            <div class="business-info">
-              <h3>Visit Us</h3>
-              <address>
-                <div class="info-item">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span>[Full Address], Alkapuri, Vadodara, Gujarat [PIN]</span>
-                </div>
-                <div class="info-item">
-                  <i class="fas fa-phone"></i>
-                  <a href="tel:+91XXXXXXXXXX">+91-XXXXXXXXXX</a>
-                </div>
-                <div class="info-item">
-                  <i class="fas fa-envelope"></i>
-                  <a href="mailto:info@saherihardware.com">info@saherihardware.com</a>
-                </div>
-              </address>
-
-              <h4>Business Hours</h4>
-              <ul class="hours">
-                <li><i class="fas fa-clock"></i> Monday - Saturday: 9:00 AM - 7:00 PM</li>
-                <li><i class="fas fa-clock"></i> Sunday: Closed</li>
-              </ul>
             </div>
           </div>
         </div>
@@ -300,22 +432,52 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Footer with Modern Design -->
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer-info">
-        <h4>SAHERI HARDWARE CENTRE</h4>
-        <p>Quality Hardware & Building Materials</p>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <i class="fas fa-tools"></i>
+            <span>SAHERI HARDWARE</span>
+          </div>
+          <p>Your trusted partner for quality hardware and building materials in Vadodara.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Alkapuri, Vadodara, Gujarat</li>
+            <li><i class="fas fa-phone"></i> +91-XXXXXXXXXX</li>
+            <li><i class="fas fa-envelope"></i> info@saherihardware.com</li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-contact">
-        <p><i class="fas fa-map-marker-alt"></i> Alkapuri, Vadodara, Gujarat</p>
-        <p><i class="fas fa-phone"></i> +91-XXXXXXXXXX</p>
-      </div>
-      <div class="footer-copyright">
+      <div class="footer-bottom">
         <p>&copy; 2025 Saheri Hardware Centre. All Rights Reserved.</p>
+        <p>Designed with <i class="fas fa-heart"></i> for Better Hardware Shopping</p>
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>
